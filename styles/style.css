@@ -1,6 +1,27 @@
-/********************************/
+/*********/
+/* FONTS */
+/*********/
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/fredoka/fredoka-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('../fonts/fredoka/fredoka-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
+
+
+/**************/
 /* CSS REMEDY */
-/********************************/
+/**************/
 
 *, *::after, *::before {
     box-sizing: border-box;
@@ -19,15 +40,14 @@ img {
     max-width: 100%;
 }
 
-button,
-input {
+button, input {
     font: inherit;
 }
 
 
-/********************************/
+/*********************/
 /* CUSTOM PROPERTIES */
-/********************************/
+/*********************/
 
 :root {
     --color-pink: #ff0080;
@@ -38,19 +58,17 @@ input {
 }
 
 
-/********************************/
+/********************/
 /* ALGEMENE STYLING */
-/********************************/
+/********************/
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     color: var(--color-brown);
     background-color: var(--color-cream);
 }
 
-header,
-main,
-footer {
+header,main, footer {
     width: 100%;
     min-width: 0;
 }
@@ -64,9 +82,8 @@ section {
     padding: 3rem 5%;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
+    font-weight: 700;
     line-height: 1.1;
 }
 
@@ -79,10 +96,8 @@ button {
 }
 
 
-/********************************/
-/* NAVIGATIE */
-/********************************/
 
+/* NAVIGATIE */
 header nav {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -145,10 +160,8 @@ header nav > a:last-of-type {
 }
 
 
-/********************************/
-/* PRODUCTEN */
-/********************************/
 
+/* PRODUCTEN */
 .products {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -165,10 +178,8 @@ header nav > a:last-of-type {
 }
 
 
-/********************************/
-/* PRODUCT KAARTEN */
-/********************************/
 
+/* PRODUCT KAARTEN */
 article {
     min-width: 0;
 
@@ -196,10 +207,8 @@ article h3 {
 }
 
 
-/********************************/
-/* FILTERS */
-/********************************/
 
+/* FILTERS */
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -223,10 +232,7 @@ article h3 {
 
 
 
-/********************************/
 /* FOOTER */
-/********************************/
-
 footer {
     padding: 3rem 5%;
 
@@ -247,11 +253,11 @@ footer ul {
 }
 
 
-/********************************/
+
+
+/****************/
 /* INDEX PAGINA */
-/********************************/
-
-
+/****************/
 
 /* CAROUSEL */
 .carousel {
@@ -274,16 +280,17 @@ footer ul {
 
 
 
-/********************************/
+
+/***************/
 /* MENU PAGINA */
-/********************************/
+/***************/
 
 
 
 
-/********************************/
+/**************/
 /* RESPONSIVE */
-/********************************/
+/**************/
 
 @media (max-width: 700px) {
 
@@ -303,5 +310,4 @@ footer ul {
     .carousel {
         grid-auto-columns: calc((100% - 1rem) / 2);
     }
-
 }
